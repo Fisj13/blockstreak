@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BlockWei Streaks is a Sepolia Ethereum dApp for building an on-chain block streak, unlocking permanent milestones, and testing sponsor-funded rewards.">
+  <meta name="keywords" content="Ethereum block streak, Sepolia dApp, Ethereum testnet, Web3 achievements, smart contract rewards, BlockStreak">
+  <meta name="author" content="BlockWei Streaks">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#07111f">
+  <!-- Replace this URL after GitHub Pages gives you the final address. -->
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/blockstreak/">
+  <!-- Paste the complete Google Search Console verification meta tag below this comment. -->
+  <!-- <meta name="google-site-verification" content="YOUR-SEARCH-CONSOLE-CODE"> -->
+  <meta property="og:site_name" content="BlockWei Streaks">
+  <meta property="og:title" content="BlockWei Streaks — Ethereum Block Achievements">
+  <meta property="og:description" content="Use Sepolia test ETH to build an on-chain Ethereum block streak and unlock permanent smart-contract milestones.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/blockstreak/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BlockWei Streaks — Ethereum Block Achievements">
+  <meta name="twitter:description" content="Build a Sepolia Ethereum block streak and unlock permanent on-chain milestones.">
+  <title>BlockWei Streaks | Sepolia Ethereum BlockStreak dApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Cpath d='M32 7l18 25-18 11L14 32 32 7zm0 40l18-11-18 21-18-21 18 11z' fill='%235df5c4'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#07111f;--panel:#0b1c2e;--panel2:#10253b;--mint:#5df5c4;--muted:#8d9eae;--line:rgba(255,255,255,.11);--warn:#ff9d7f;--gold:#ffd166}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:#fff;font-family:Manrope,system-ui,sans-serif;line-height:1.55}.container{width:min(1160px,calc(100% - 36px));margin:auto}button,input,select{font:inherit}button{cursor:pointer}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.04em}.brand i{font-style:normal;color:var(--mint)}.build{color:var(--mint);border:1px solid rgba(93,245,196,.3);padding:3px 6px;font:500 .5rem "DM Mono",monospace;letter-spacing:.08em}.wallet{background:rgba(93,245,196,.08);border:1px solid rgba(93,245,196,.4);color:var(--mint);padding:10px 14px;font:500 .67rem "DM Mono",monospace}.wallet:hover{background:var(--mint);color:var(--ink)}
+    .hero{padding:76px 0 45px;display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:end}.kicker{color:var(--mint);font:500 .67rem "DM Mono",monospace;letter-spacing:.13em}.kicker:before{content:"";display:inline-block;width:7px;height:7px;background:var(--mint);border-radius:50%;margin-right:9px;box-shadow:0 0 13px var(--mint)}h1{font-size:clamp(3.5rem,7vw,6.6rem);line-height:.92;letter-spacing:-.075em;margin:22px 0}h1 span{color:var(--mint)}.hero-copy>p:last-child{max-width:650px;color:var(--muted)}.streak-visual{background:var(--panel);border:1px solid rgba(93,245,196,.24);padding:28px}.streak-visual small,.stat small{display:block;color:var(--muted);font:500 .58rem "DM Mono",monospace;letter-spacing:.1em}.streak-visual b{display:block;font-size:3.1rem;letter-spacing:-.07em;margin:4px 0}.streak-visual p{color:var(--muted);font-size:.76rem;margin:0}.pulse{width:8px;height:8px;border-radius:50%;background:var(--mint);display:inline-block;margin-right:8px;box-shadow:0 0 15px var(--mint)}
+    .contract-bar{display:grid;grid-template-columns:1fr auto;gap:10px;padding:18px;background:var(--panel);border:1px solid var(--line);margin-bottom:22px}.input,select{width:100%;background:#071522;border:1px solid var(--line);color:#fff;padding:12px 13px;outline:none;font:400 .76rem "DM Mono",monospace}.input:focus,select:focus{border-color:var(--mint)}.primary,.outline{border:1px solid var(--mint);padding:12px 17px;font-size:.78rem;font-weight:800}.primary{background:var(--mint);color:var(--ink)}.outline{background:transparent;color:var(--mint)}.primary:hover{background:#fff;border-color:#fff}.outline:hover{background:rgba(93,245,196,.08)}button:disabled{opacity:.4;cursor:not-allowed}
+    .dashboard{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;padding-bottom:24px}.panel{background:var(--panel);border:1px solid var(--line);padding:26px}.panel h2{font-size:1.2rem;margin:7px 0 22px}.label{color:var(--mint);font:500 .61rem "DM Mono",monospace;letter-spacing:.11em}.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.stat{background:var(--panel2);padding:15px}.stat b{display:block;font-size:.84rem;margin-top:5px;word-break:break-all}.field{margin-top:18px}.field label{display:flex;justify-content:space-between;color:#d1d8df;font-size:.73rem;margin-bottom:7px}.field label span{color:var(--muted)}.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.actions .primary:first-child{grid-column:1/-1}
+    .milestones{display:grid;grid-template-columns:1fr 1fr;gap:10px}.badge{background:var(--panel2);border:1px solid var(--line);padding:18px;position:relative;overflow:hidden}.badge.earned{border-color:rgba(93,245,196,.55)}.badge.earned:after{content:"EARNED";position:absolute;right:-24px;top:13px;background:var(--mint);color:var(--ink);font:800 .55rem "DM Mono",monospace;padding:4px 28px;transform:rotate(40deg)}.badge-icon{font-size:1.35rem;color:var(--gold)}.badge h3{font-size:.9rem;margin:10px 0 3px}.badge p{color:var(--muted);font-size:.68rem;margin:0}.progress{height:4px;background:#203449;margin:13px 0}.progress i{display:block;height:100%;background:var(--mint);width:0}.badge-foot{display:flex;justify-content:space-between;align-items:center;gap:8px}.badge-foot span{color:#a8b6c3;font:400 .59rem "DM Mono",monospace}.badge button{padding:7px 9px;font-size:.6rem}
+    .status{margin:0 0 22px;min-height:48px;border-left:2px solid #385067;background:rgba(255,255,255,.025);padding:12px 15px;color:var(--muted);font:400 .68rem "DM Mono",monospace}.status.good{border-color:var(--mint);color:var(--mint)}.status.bad{border-color:var(--warn);color:var(--warn)}
+    .lower{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding-bottom:45px}.fund-row{display:grid;grid-template-columns:1fr auto;gap:8px}.owner-panel{display:none}.owner-panel.show{display:block}.sponsor-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.sponsor-grid .primary{grid-column:1/-1}.note{color:var(--muted);font-size:.72rem}.warning{grid-column:1/-1;border:1px solid rgba(255,157,127,.3);background:rgba(255,157,127,.06);padding:18px;color:#b8c3cc;font-size:.75rem}.warning b{color:#ffb19a}.share{margin-top:18px;width:100%}
+    .learn{padding:45px 0 85px;border-top:1px solid var(--line)}.learn-head{max-width:780px;margin-bottom:28px}.learn h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;letter-spacing:-.055em;margin:12px 0}.learn-head>p,.info-card p,.faq p{color:var(--muted)}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-card{background:var(--panel);border:1px solid var(--line);padding:24px}.info-card h3{font-size:1rem;margin:10px 0}.info-card p{font-size:.78rem;margin:0}.contract-link{color:var(--mint);word-break:break-all}.faq-list{margin-top:38px;display:grid;gap:9px}.faq{background:var(--panel);border:1px solid var(--line);padding:0 20px}.faq summary{cursor:pointer;padding:17px 0;font-weight:700}.faq p{font-size:.78rem;margin:0;padding:0 0 18px}.legal{margin-top:30px;padding:20px;border-left:2px solid var(--mint);background:rgba(93,245,196,.04);color:var(--muted);font-size:.72rem}.legal h3{color:#fff;margin:0 0 7px;font-size:.88rem}.legal a{color:var(--mint)}
+    footer{border-top:1px solid var(--line);padding:27px 0;color:#66798a;font-size:.68rem}.footer{display:flex;justify-content:space-between}
+    @media(max-width:820px){.hero,.dashboard,.lower,.info-grid{grid-template-columns:1fr}.hero{gap:28px}.streak-visual{max-width:550px}.warning{grid-column:auto}}
+    @media(max-width:520px){.container{width:min(100% - 24px,1160px)}nav{height:65px}h1{font-size:3.4rem}.contract-bar{grid-template-columns:1fr}.panel{padding:20px}.milestones,.stats,.actions,.sponsor-grid{grid-template-columns:1fr}.actions .primary:first-child,.sponsor-grid .primary{grid-column:auto}.footer{flex-direction:column;gap:7px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BlockWei Streaks",
+    "alternateName": "BlockStreak",
+    "description": "A Sepolia Ethereum dApp for building an on-chain block streak and unlocking smart-contract milestones.",
+    "url": "https://YOUR-GITHUB-USERNAME.github.io/blockstreak/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web browser",
+    "isAccessibleForFree": true,
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+  <script>
+    /* Replace with your GA4 Measurement ID, for example G-ABC1234567. */
+    const GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX";
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments)}
+    if(/^G-[A-Z0-9]+$/.test(GOOGLE_ANALYTICS_ID)&&GOOGLE_ANALYTICS_ID!=="G-XXXXXXXXXX"){
+      const analyticsScript=document.createElement("script");
+      analyticsScript.async=true;
+      analyticsScript.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(GOOGLE_ANALYTICS_ID);
+      document.head.appendChild(analyticsScript);
+      gtag("js",new Date());
+      gtag("config",GOOGLE_ANALYTICS_ID,{anonymize_ip:true});
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <nav class="container"><div class="brand"><i>◆</i><span>BlockWei Streaks</span><span class="build">SEP BUILD 4</span></div><button class="wallet" id="connect">CONNECT METAMASK</button></nav>
+  <main>
+    <header class="hero container"><div class="hero-copy"><p class="kicker">ON-CHAIN PROOF OF PATIENCE</p><h1>Make every<br><span>block count.</span></h1><p>Deposit at least 0.01 ETH, keep your streak alive, and permanently unlock achievements as Ethereum produces new blocks.</p></div><div class="streak-visual"><small><span class="pulse"></span>YOUR ACTIVE STREAK</small><b id="heroStreak">0</b><p>Ethereum blocks completed</p></div></header>
+    <section class="container">
+      <div class="contract-bar"><input class="input" id="address" value="0x96a7A547dF1331BdfAF139Db39AEeef2711D669e" readonly aria-label="Contract address"><button class="outline" id="load">LOAD CONTRACT</button></div>
+      <div class="dashboard">
+        <section class="panel"><span class="label">YOUR VAULT</span><h2>Deposit position</h2><div class="stats"><div class="stat"><small>DEPOSIT</small><b id="depositValue">—</b></div><div class="stat"><small>BASE REWARD</small><b id="baseReward">—</b></div><div class="stat"><small>REWARD RESERVE</small><b id="reserve">—</b></div><div class="stat"><small>CURRENT BLOCK</small><b id="block">—</b></div></div><div class="field"><label for="amount">ETH amount <span>Minimum streak: 0.01 ETH</span></label><input class="input" id="amount" inputmode="decimal" placeholder="0.01"></div><div class="actions"><button class="primary action" id="deposit" disabled>DEPOSIT ETH</button><button class="outline action" id="withdraw" disabled>WITHDRAW</button><button class="outline action" id="claimBase" disabled>CLAIM BASE REWARD</button></div></section>
+        <section class="panel"><span class="label">ACHIEVEMENTS</span><h2>Your block milestones</h2><div class="milestones" id="milestones"></div><button class="outline share" id="share">SHARE MY STREAK</button></section>
+      </div>
+      <div class="status" id="status">Sepolia diagnostic build 4 ready. Connect MetaMask to validate the deployed contract.</div>
+      <div class="lower">
+        <section class="panel"><span class="label">BASE REWARDS</span><h2>Fund 1-wei rewards</h2><p class="note">Adds ETH to the base reward reserve without increasing your deposit.</p><div class="fund-row"><input class="input" id="fundAmount" inputmode="decimal" placeholder="0.01"><button class="primary action" id="fundBase" disabled>FUND</button></div></section>
+        <section class="panel owner-panel" id="ownerPanel"><span class="label">OWNER CAMPAIGN</span><h2>Sponsor a milestone</h2><p class="note">Fund fixed rewards for the next qualifying wallets. Funding remains locked until every slot is claimed.</p><div class="sponsor-grid"><select id="sponsorId"><option value="0">Bronze · 7,200 blocks</option><option value="1">Silver · 50,400 blocks</option><option value="2">Gold · 216,000 blocks</option><option value="3">Founder · 1,000,000 blocks</option></select><input class="input" id="slots" type="number" min="1" step="1" placeholder="Claim slots"><input class="input" id="sponsorAmount" inputmode="decimal" placeholder="Total ETH funding"><button class="primary action" id="sponsor" disabled>CREATE CAMPAIGN</button></div></section>
+        <div class="warning"><b>Not an investment return.</b> The base rate is only 1 wei per block per deposited ETH—approximately 0.0000000000026 ETH annually for a 1 ETH deposit. Gas will generally cost much more. Milestone rewards exist only when separately sponsored.</div>
+      </div>
+    </section>
+    <section class="learn" id="learn">
+      <div class="container">
+        <div class="learn-head"><span class="label">ABOUT BLOCKSTREAK</span><h2>Learn the dApp before connecting.</h2><p>BlockWei Streaks is an experimental Ethereum application deployed on the Sepolia test network. It records a deposit position, counts the Ethereum blocks completed while that position remains active, and lets qualifying wallets claim permanent milestone achievements.</p></div>
+        <div class="info-grid">
+          <article class="info-card"><span class="label">01 · CONNECT</span><h3>Use MetaMask on Sepolia</h3><p>Connect a wallet and switch to the Sepolia network. Sepolia ETH is test currency and has no intended monetary value.</p></article>
+          <article class="info-card"><span class="label">02 · BUILD</span><h3>Start a block streak</h3><p>Deposit at least 0.01 test ETH. The smart contract calculates your active streak from Ethereum block numbers rather than a private website database.</p></article>
+          <article class="info-card"><span class="label">03 · CLAIM</span><h3>Unlock achievements</h3><p>Claim milestones after reaching their required block counts. A monetary milestone reward exists only when the owner has created and funded a campaign.</p></article>
+        </div>
+        <div class="faq-list">
+          <details class="faq"><summary>What network and contract does BlockWei use?</summary><p>This build uses the Ethereum Sepolia test network and contract <a class="contract-link" href="https://sepolia.etherscan.io/address/0x96a7A547dF1331BdfAF139Db39AEeef2711D669e" target="_blank" rel="noopener noreferrer">0x96a7A547dF1331BdfAF139Db39AEeef2711D669e</a>. Always verify the network and address in MetaMask before approving a transaction.</p></details>
+          <details class="faq"><summary>Is the base reward meaningful income?</summary><p>No. The base reward is deliberately tiny: one wei per completed block per deposited ETH. Network gas will generally cost much more than the reward. This Sepolia build is a product and contract demonstration, not an investment product.</p></details>
+          <details class="faq"><summary>Can I withdraw my deposited test ETH?</summary><p>The interface calls the contract's withdrawal function for the amount you enter. Read every MetaMask transaction carefully, confirm that the amount is correct, and test with small amounts first.</p></details>
+          <details class="faq"><summary>What information does this site collect?</summary><p>The blockchain exposes public wallet activity by design. If the optional Google Analytics ID is configured, the site also records general usage events such as wallet connection, contract loading, confirmed actions, and streak sharing. It does not intentionally send seed phrases, private keys, wallet balances, or full wallet addresses to Analytics.</p></details>
+        </div>
+        <div class="legal" id="privacy"><h3>Safety and privacy notice</h3>This interface never needs your seed phrase or private key. Wallet addresses and transactions are public on Ethereum. Optional analytics measure site usage; by using the site, visitors should review any published privacy terms applicable in their location. Smart contracts can contain bugs, transactions can fail, and testnet behavior does not prove production security. <a href="https://sepolia.etherscan.io/address/0x96a7A547dF1331BdfAF139Db39AEeef2711D669e" target="_blank" rel="noopener noreferrer">Inspect the contract on Sepolia Etherscan</a>.</div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer"><span>BlockWei Streaks · Sepolia testnet</span><span><a href="#learn" style="color:inherit">How it works</a> · <a href="#privacy" style="color:inherit">Privacy &amp; risk</a> · Test ETH has no monetary value</span></div></footer>
+  <script>
+    const ABI=[
+      "function owner() view returns(address)","function deposit() payable","function withdraw(uint256)","function claimBaseRewards()","function fundBaseRewards() payable","function sponsorMilestone(uint8,uint32) payable","function claimMilestone(uint8)",
+      "function deposits(address) view returns(uint256)","function claimableBaseRewards(address) view returns(uint256)","function baseRewardReserve() view returns(uint256)","function currentStreakBlocks(address) view returns(uint256)","function achievementMask(address) view returns(uint8)","function milestoneBlocks(uint256) view returns(uint256)","function milestoneCampaigns(uint8) view returns(uint256 rewardPerClaim,uint32 claimsRemaining)","function MIN_STREAK_DEPOSIT() view returns(uint256)"
+    ];
+    const badgeNames=["Bronze","Silver","Gold","Founder"],badgeIcons=["◈","◇","◆","✦"];
+    let provider,signer,contract,account,currentStreak=0n,milestoneData=[],walletProvider=null;
+    const $=id=>document.getElementById(id),actions=()=>document.querySelectorAll(".action");
+    function track(name,data={}){if(typeof gtag==="function")gtag("event",name,{event_category:"web3",...data})}
+    function msg(text,type=""){const el=$("status");el.textContent=text;el.className="status "+type}
+    function errorText(error){const code=error?.code?String(error.code):"unknown";const detail=error?.shortMessage||error?.reason||error?.info?.error?.message||error?.message||"No error detail";return detail+" [code: "+code+"]"}
+    function short(a){return a.slice(0,6)+"…"+a.slice(-4)}
+    function enable(value){actions().forEach(el=>el.disabled=!value)}
+    function eth(v){return Number(ethers.formatEther(v)).toLocaleString(undefined,{maximumFractionDigits:10})+" ETH"}
+    function renderBadges(mask=0){
+      $("milestones").innerHTML=milestoneData.map((m,i)=>{const earned=(mask&(1<<i))!==0,progress=m.blocks?Math.min(100,Number(currentStreak*100n/m.blocks)):0,reward=m.slots?eth(m.reward)+" · "+m.slots+" left":"Badge only";return `<article class="badge ${earned?"earned":""}"><span class="badge-icon">${badgeIcons[i]}</span><h3>${badgeNames[i]}</h3><p>${Number(m.blocks).toLocaleString()} blocks · ${reward}</p><div class="progress"><i style="width:${progress}%"></i></div><div class="badge-foot"><span>${progress}%</span><button class="outline claim-milestone" data-id="${i}" ${earned||progress<100?"disabled":""}>CLAIM</button></div></article>`}).join("");
+      document.querySelectorAll(".claim-milestone").forEach(button=>button.addEventListener("click",()=>transact("milestone claim",()=>contract.claimMilestone(Number(button.dataset.id)),"milestone_claim")));
+    }
+    async function sepolia(){const n=await provider.getNetwork();if(n.chainId===11155111n)return true;try{await walletProvider.request({method:"wallet_switchEthereumChain",params:[{chainId:"0xaa36a7"}]});provider=new ethers.BrowserProvider(walletProvider);signer=await provider.getSigner();return true}catch{msg("Switch MetaMask to the Sepolia test network.","bad");return false}}
+    const isMobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    let isEmbedded=false;try{isEmbedded=window.self!==window.top}catch{isEmbedded=true}
+    function metamaskDeepLink(){return "https://link.metamask.io/dapp/"+location.host+location.pathname+location.search}
+    window.addEventListener("eip6963:announceProvider",event=>{
+      const detail=event.detail;
+      if(detail?.info?.rdns==="io.metamask"||detail?.provider?.isMetaMask){
+        walletProvider=detail.provider;
+        $("connect").textContent="CONNECT METAMASK";
+      }
+    });
+    window.dispatchEvent(new Event("eip6963:requestProvider"));
+    window.addEventListener("ethereum#initialized",()=>{
+      if(!walletProvider&&window.ethereum){walletProvider=window.ethereum;$("connect").textContent="CONNECT METAMASK"}
+    },{once:true});
+    async function detectWallet(){
+      if(walletProvider)return walletProvider;
+      if(window.ethereum?.isMetaMask){walletProvider=window.ethereum;return walletProvider}
+      for(let attempt=0;attempt<20;attempt++){
+        await new Promise(resolve=>setTimeout(resolve,100));
+        if(walletProvider)return walletProvider;
+        if(window.ethereum?.isMetaMask){walletProvider=window.ethereum;return walletProvider}
+      }
+      return null
+    }
+    async function connect(){
+      const detected=await detectWallet();
+      if(!detected){
+        if(location.protocol==="file:"){msg("Deploy this page to Netlify first. Wallet extensions cannot reliably connect to a local file.","bad");return}
+        if(isEmbedded){window.open(location.href,"_blank","noopener,noreferrer");msg("The live site was opened in a new tab. Connect MetaMask there.","good");return}
+        if(isMobile){msg("Opening this site inside the MetaMask mobile browser…","good");location.href=metamaskDeepLink();return}
+        window.open("https://metamask.io/download/","_blank","noopener,noreferrer");
+        msg("Install or enable the MetaMask extension, allow it on this site, then refresh the page.","bad");return
+      }
+      try{provider=new ethers.BrowserProvider(detected);await provider.send("eth_requestAccounts",[]);signer=await provider.getSigner();account=await signer.getAddress();$("connect").textContent=short(account);msg("Wallet connected. Loading the Sepolia contract…","good");track("wallet_connected");detected.on?.("accountsChanged",()=>location.reload());detected.on?.("chainChanged",()=>location.reload());await load()}catch(e){msg(e.code===4001?"Connection declined.":"Unable to connect MetaMask. Unlock the extension and allow this site.","bad")}
+    }
+    async function load(){if(!signer)return msg("Connect MetaMask first.","bad");if(!await sepolia())return;const address=$("address").value.trim();if(!ethers.isAddress(address))return msg("Enter a valid contract address.","bad");try{if(await provider.getCode(address)==="0x")throw new Error("No bytecode");contract=new ethers.Contract(address,ABI,signer);const [minimum,bronze]=await Promise.all([contract.MIN_STREAK_DEPOSIT(),contract.milestoneBlocks(0)]);if(minimum!==10000000000000000n||bronze!==7200n)throw new Error("Wrong contract version");localStorage.setItem("blockStreakContract",address);enable(true);msg("BlockStreakVault loaded on Sepolia. Values refresh every block.","good");track("contract_loaded");await refresh()}catch(e){contract=null;enable(false);msg(e.message==="Wrong contract version"?"That address is not the V2 BlockStreakVault contract.":"No compatible BlockStreakVault was found at that address on Sepolia.","bad")}}
+    async function refresh(){
+      if(!contract||!account)return;
+      let stage="your deposit";
+      try{
+        const depositValue=await contract.deposits(account);
+        stage="claimable base rewards";const baseValue=await contract.claimableBaseRewards(account);
+        stage="base reward reserve";const reserveValue=await contract.baseRewardReserve();
+        stage="current streak";currentStreak=await contract.currentStreakBlocks(account);
+        stage="achievement mask";const mask=await contract.achievementMask(account);
+        stage="contract owner";const contractOwner=await contract.owner();
+        stage="current block";const currentBlock=await provider.getBlockNumber();
+        milestoneData=[];
+        for(let i=0;i<4;i++){stage="milestone "+i;const blocks=await contract.milestoneBlocks(i);const campaign=await contract.milestoneCampaigns(i);milestoneData.push({blocks,reward:campaign[0],slots:Number(campaign[1])})}
+        $("depositValue").textContent=eth(depositValue);$("baseReward").textContent=baseValue+" wei";$("reserve").textContent=eth(reserveValue);$("block").textContent=currentBlock.toLocaleString();$("heroStreak").textContent=Number(currentStreak).toLocaleString();$("ownerPanel").classList.toggle("show",contractOwner.toLowerCase()===account.toLowerCase());renderBadges(Number(mask));msg("Sepolia contract reads succeeded at block "+currentBlock.toLocaleString()+".","good")
+      }catch(error){console.error("Refresh failed at",stage,error);msg("Refresh failed while reading "+stage+": "+errorText(error),"bad")}
+    }
+    async function transact(label,fn,event){try{enable(false);msg("Checking "+label+" on Sepolia…");const tx=await fn();msg("Submitted "+tx.hash.slice(0,12)+"…");await tx.wait();msg(label[0].toUpperCase()+label.slice(1)+" confirmed.","good");track(event);await refresh()}catch(e){console.error(label,e);msg(e.code===4001||e.code==="ACTION_REJECTED"?"Transaction declined.":label+" failed: "+errorText(e),"bad")}finally{enable(Boolean(contract))}}
+    $("connect").onclick=connect;$("load").onclick=load;
+    $("deposit").onclick=()=>{const v=$("amount").value;if(!v||Number(v)<=0)return msg("Enter a Sepolia ETH amount.","bad");transact("deposit",async()=>{const value=ethers.parseEther(v);await contract.deposit.estimateGas({value});return contract.deposit({value})},"deposit_confirmed")};
+    $("withdraw").onclick=()=>{const v=$("amount").value;if(!v||Number(v)<=0)return msg("Enter an ETH amount.","bad");transact("withdrawal",()=>contract.withdraw(ethers.parseEther(v)),"withdraw_confirmed")};
+    $("claimBase").onclick=()=>transact("base reward claim",()=>contract.claimBaseRewards(),"base_reward_claimed");
+    $("fundBase").onclick=()=>{const v=$("fundAmount").value;if(!v||Number(v)<=0)return msg("Enter a funding amount.","bad");transact("base reward funding",()=>contract.fundBaseRewards({value:ethers.parseEther(v)}),"base_rewards_funded")};
+    $("sponsor").onclick=()=>{const id=Number($("sponsorId").value),slots=Number($("slots").value),v=$("sponsorAmount").value;if(!Number.isInteger(slots)||slots<1||!v||Number(v)<=0)return msg("Enter valid slots and total funding.","bad");transact("milestone campaign",()=>contract.sponsorMilestone(id,slots,{value:ethers.parseEther(v)}),"campaign_created")};
+    $("share").onclick=async()=>{const text=`My BlockWei Ethereum deposit streak is ${Number(currentStreak).toLocaleString()} blocks.`;try{if(navigator.share)await navigator.share({title:"My BlockWei Streak",text});else{await navigator.clipboard.writeText(text);msg("Streak copied to clipboard.","good")}track("streak_shared")}catch{}};
+    if(window.ethereum?.isMetaMask){walletProvider=window.ethereum;$("connect").textContent="CONNECT METAMASK"}
+    else if(location.protocol==="file:"){$("connect").textContent="DEPLOY SITE FIRST"}
+    else if(isEmbedded){$("connect").textContent="OPEN LIVE SITE"}
+    else if(isMobile){$("connect").textContent="OPEN IN METAMASK"}
+    else{$("connect").textContent="INSTALL METAMASK"}
+    setInterval(refresh,12000);
+    milestoneData=[7200n,50400n,216000n,1000000n].map(blocks=>({blocks,reward:0n,slots:0}));renderBadges();
+  </script>
+</body>
+</html>
